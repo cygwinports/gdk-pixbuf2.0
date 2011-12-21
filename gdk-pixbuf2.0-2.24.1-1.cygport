@@ -13,4 +13,4 @@ libgdk_pixbuf_xlib2_0_devel_CONTENTS="usr/include/gdk-pixbuf-2.0/gdk-pixbuf-xlib
                  usr/lib/pkgconfig/gdk-pixbuf-xlib-2.0.pc"
 girepository_GdkPixbuf2_0_CONTENTS="usr/*/gir*/GdkPixbuf-2.0.*"
 
-CYGCONF_ARGS="--with-libjasper"
+CYGCONF_ARGS="--with-libjasper --with-x11"
