@@ -13,4 +13,9 @@ libgdk_pixbuf_xlib2_0_devel_CONTENTS="usr/include/gdk-pixbuf-2.0/gdk-pixbuf-xlib
                  usr/lib/pkgconfig/gdk-pixbuf-xlib-2.0.pc"
 girepository_GdkPixbuf2_0_CONTENTS="usr/*/gir*/GdkPixbuf-2.0.*"
 
-CYGCONF_ARGS="--with-libjasper --with-x11"
+# include most of the loaders to minimize ImageBase space and rebase issues,
+# except for jasper,jpeg,tiff which have external deps (png is always needed)
+CYGCONF_ARGS="--with-libjasper --with-x11
+              --with-included-loaders=ani,icns,pcx,ras,tga,png,pnm,wbmp,xbm,xpm,qtif,bmp,gif,ico"
+
+KEEP_LA_FILES="shared"
