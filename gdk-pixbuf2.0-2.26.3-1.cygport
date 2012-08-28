@@ -1,16 +1,26 @@
 ORIG_PN="gdk-pixbuf"
 inherit gnome2
 
+CATEGORY="Gnome"
+SUMMARY="GNOME image loading library"
+DESCRIPTION="Offering a complete set of widgets, GTK+ is suitable for projects
+ranging from small one-off projects to complete application suites."
+
 PKG_NAMES="libgdk_pixbuf2.0_0 libgdk_pixbuf2.0-devel girepository-GdkPixbuf2.0
            libgdk_pixbuf_xlib2.0_0 libgdk_pixbuf_xlib2.0-devel"
+libgdk_pixbuf2_0_0_SUMMARY="${SUMMARY} (runtime)"
 libgdk_pixbuf2_0_0_CONTENTS="--exclude=*xlib* etc/ usr/bin/ usr/lib/*/*/loaders/
                  usr/share/doc/ usr/share/locale/ usr/share/man/"
+libgdk_pixbuf2_0_devel_SUMMARY="${SUMMARY} (development)"
 libgdk_pixbuf2_0_devel_CONTENTS="--exclude=*xlib* usr/include/ usr/lib/lib*
                  usr/lib/pkgconfig/ usr/share/gtk-doc/"
+libgdk_pixbuf_xlib2_0_0_SUMMARY="${SUMMARY} (X11 runtime)"
 libgdk_pixbuf_xlib2_0_0_CONTENTS="usr/bin/cyggdk_pixbuf_xlib-2.0-0.dll"
+libgdk_pixbuf_xlib2_0_devel_SUMMARY="${SUMMARY} (X11 development)"
 libgdk_pixbuf_xlib2_0_devel_CONTENTS="usr/include/gdk-pixbuf-2.0/gdk-pixbuf-xlib/
                  usr/lib/libgdk_pixbuf_xlib-2.0.*
                  usr/lib/pkgconfig/gdk-pixbuf-xlib-2.0.pc"
+girepository_GdkPixbuf2_0_SUMMARY="${SUMMARY} (GObject Introspection)"
 girepository_GdkPixbuf2_0_CONTENTS="usr/*/gir*/GdkPixbuf-2.0.*"
 
 # include most of the loaders to minimize ImageBase space and rebase issues,
