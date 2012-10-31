@@ -1,6 +1,6 @@
 NAME="gdk-pixbuf2.0"
 VERSION=2.26.4
-RELEASE=1
+RELEASE=2
 CATEGORY="Gnome"
 SUMMARY="GNOME image loading library"
 DESCRIPTION="Offering a complete set of widgets, GTK+ is suitable for projects
