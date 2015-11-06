@@ -2,14 +2,12 @@ ORIG_PN="gdk-pixbuf"
 inherit gnome2
 
 NAME="gdk-pixbuf2.0"
-VERSION=2.31.7
+VERSION=2.32.1
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="GNOME image loading library"
 DESCRIPTION="Offering a complete set of widgets, GTK+ is suitable for projects
 ranging from small one-off projects to complete application suites."
-
-PATCH_URI="2.31.7-bgo754154.patch"
 
 PKG_NAMES="libgdk_pixbuf2.0_0 libgdk_pixbuf2.0-devel libgdk_pixbuf2.0-doc
            girepository-GdkPixbuf2.0
@@ -37,4 +35,4 @@ libgdk_pixbuf_xlib2_0_devel_CONTENTS="usr/include/gdk-pixbuf-2.0/gdk-pixbuf-xlib
 girepository_GdkPixbuf2_0_SUMMARY="${SUMMARY} (GObject Introspection)"
 girepository_GdkPixbuf2_0_CONTENTS="usr/*/gir*/GdkPixbuf-2.0.*"
 
-CYGCONF_ARGS="--with-libjasper --with-x11"
+CYGCONF_ARGS="--with-libjasper --with-x11 --with-included-loaders=png"
